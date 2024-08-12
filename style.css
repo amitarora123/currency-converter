@@ -44,14 +44,7 @@ main {
     border-radius: 4px;
 }
 
-.container:hover {
-    /* border: 2px solid black; */
-    animation-name: shadow;
-    animation-duration: 0.3s; /* Add animation duration */
-    animation-timing-function: ease-out;
-    /* box-sizing: border-box; */
-    animation-fill-mode: forwards; /* Ensure the animation stays at the end state */
-}
+
 
 @keyframes shadow {
     from {
@@ -105,8 +98,6 @@ select:hover {
 
 
 
-
-
 .amount p {
     display: flex;
     justify-content: flex-start;
@@ -153,13 +144,44 @@ button {
     cursor: pointer;
     
 }
-
+@media only screen and (min-width:1368px) 
+{
 button:hover {
     background-color: #dbe8e2;
     border-color: rgba(129, 162, 195, 0.598);
     
 }
+
 button:active{
     background-color: #55E6A5;
     cursor:default;
+}
+.container:hover {
+    /* border: 2px solid black; */
+    animation-name: shadow;
+    animation-duration: 0.3s; /* Add animation duration */
+    animation-timing-function: ease-out;
+    /* box-sizing: border-box; */
+    animation-fill-mode: forwards; /* Ensure the animation stays at the end state */
+}}
+@media only screen and (max-width:1368px) {
+    button:active {
+        background-color: #fff;
+        border-color: rgba(129, 162, 195, 0.598);
+    }
+        .container:active {
+            /* border: 2px solid black; */
+            animation-name: shadow;
+            animation-duration: 0.3s; /* Add animation duration */
+            animation-timing-function:cubic-bezier(0.68, -0.19, 1, 1);
+            /* box-sizing: border-box; */
+            animation-fill-mode: forwards; /* Ensure the animation stays at the end state */
+        }
+        
+        
+        
+    /* button:hover{
+        background-color:#fff ;
+        cursor:default;
+    } */
 }
